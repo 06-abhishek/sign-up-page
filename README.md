@@ -56,5 +56,5 @@ This project demonstrates how to build a **full-stack authentication system** wi
 ### **1. Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/full-stack-sign-in-sign-up-form.git
-cd full-stack-sign-in-sign-up-form
+git clone https://github.com/06-abhishek/sign-up-page.git
+cd sign-up-page
