@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Link to the external CSS file -->
+  </head>
+  <body>
+    <div class="container" id="formContainer">
+      <!-- Sign In Form -->
+      <div id="signInForm" class="form hidden">
+        <h1>Sign In</h1>
+        <form action="/login" method="POST" class="clear-on-submit">
+          <div class="input-group">
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+        <!-- <div class="separator"></div> -->
+        <div class="options">
+          <a href="#" onclick="toggleForms()">Create an account</a><br />
+          <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div id="signUpForm" class="form">
+        <h1>Create an Account</h1>
+        <form action="/signup" method="POST" class="clear-on-submit">
+          <div class="input-group">
+            <label for="newUsername">Username</label>
+            <input type="text" id="newUsername" name="newUsername" required />
+          </div>
+          <div class="input-group">
+            <label for="newEmail">Email</label>
+            <input type="text" id="newEmail" name="newEmail" oninput="validEmail()" required />
+            <div class="validEmail hideValidEmail">Enter valid email.</div>
+          </div>
+          <div class="input-group">
+            <label for="newPassword">Password</label>
+            <input
+              type="password"
+              id="newPassword"
+              oninput="validPassword()"
+              name="newPassword"
+              required
+            />
+            <div class="LetterPass hideLetterPass">Password contains minimum 8 and maximum 13 letters.</div>
+            <div class="UpercasePass hideUpercasePass">Password contains at least one uppercase.</div>
+            <div class="LowercasePass hideLowercasePass">password contains at least one lowercase.</div>
+            <div class="DigitPass hideDigitPass">Password contains at least one digit.</div>
+          </div>
+          <button type="submit" id="signInBtn">Create Account</button>
+        </form>
+        <!-- <div class="separator"></div> -->
+        <div class="options">
+          <a href="#" onclick="toggleForms()"
+            >I already have an account. Sign In</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <!-- Link to the external JavaScript file -->
+  </body>
+</html>
